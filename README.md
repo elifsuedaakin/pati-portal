@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PATİ-BLOG & SAHİPLENDİRME PORTALI 🐾
+Pati Portal, hayvanseverler ile sahiplenilmeyi bekleyen can dostlarımızı modern bir dijital platformda buluşturan, yüksek performanslı bir Next.js uygulamasıdır. Proje, bilgilendirici blog içerikleri ile dinamik bir ilan sistemini tek bir çatıda toplar.
 
-## Getting Started
+🏗️ Bileşen Mimarisi
+1. Header: Navigasyon ve Akıllı Kontrol Merkezi
+Pati Logo & Nav: Kullanıcıyı her zaman varsayılan blog akışına döndüren hızlı navigasyon.
 
-First, run the development server:
+Akıllı Arama Çubuğu (Client Component): Blog yazıları ve ilanlar içinde eş zamanlı arama yapmayı sağlar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Gelişmiş Sıralama Algoritması:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alfabetik Temel: Tüm sonuçlar varsayılan olarak A'dan Z'ye sıralanır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Arama Ağırlığı (Search Priority): Aranan kelime başlıkta geçiyorsa, alfabetik sırayı bozmadan o öğeyi en üste taşır.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Empty State: Arama sonucu bulunamadığında "📚 İlgili blog bulunamadı" veya "🐾 Uygun ilan bulunamadı" şeklinde kullanıcı dostu geri bildirimler sunar.
 
-## Learn More
+Tür Filtreleme (Dropdown): "Kedi, Köpek, Kuş, Egzotik" gibi kategoriler arasında anlık geçiş imkanı.
 
-To learn more about Next.js, take a look at the following resources:
+2. Dinamik İçerik Alanı (Main Content)
+Dinamik Akış: Seçilen kategoriye göre "Pati Blog" veya "Sahiplendirme İlanları" arasında pürüzsüz geçiş.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Kompakt Kart Tasarımı: Blog ve hayvan kartları, gereksiz boşluklardan arındırılmış, görsel odaklı ve "jilet gibi" bir estetikle sunulur.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Dinamik Routing: /blog/[id] ve /sahiplenme/[id] yapıları sayesinde her içerik için SEO dostu, benzersiz sayfalar.
 
-## Deploy on Vercel
+3. Sahiplendirme Formu & Spam Kalkanı
+Kapsamlı Veri Girişi: Ad-Soyad, Doğum Tarihi, 11 haneli TC No ve adres bilgilerini içeren güvenli form yapısı.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Anlık Validasyon: Form gönderilmeden önce tüm alanlar denetlenir; eksik bilgide "Bu alan boş bırakılamaz" uyarısı dinamik olarak belirir.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LocalStorage Koruması: Kullanıcının aynı hayvana mükerrer başvuru yapması tarayıcı bazlı engellenerek sistem suistimali önlenir.
+
+🛠️ Teknik Stack
+Framework: Next.js 14/15+ (App Router mimarisi ile maksimum hız).
+
+Styling: Tailwind CSS & Shadcn/ui (Modern ve erişilebilir arayüz).
+
+State Management: Zustand (Persist Middleware ile kategori ve arama verilerinin kalıcılığı).
+
+Form & İletişim: Formspree API (Sunucu taraflı karmaşa olmadan, doğrudan e-posta entegrasyonu).
+
+Theme: Next-themes (Açık ve Koyu tema desteği).
+
+Linter/Formatting: Biome (Kod kalitesi ve A11y standartları).
+
+📩 İletişim ve Veri Akışı
+Başvuru formu başarıyla doldurulduğunda, veriler güvenli bir şekilde işlenir ve yönetici e-posta adresine  detaylı bir rapor olarak iletilir. İşlem sonrası kullanıcıya işlemin alındığına dair görsel bir başarı ekranı sunulur.
