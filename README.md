@@ -34,3 +34,8 @@ Pati Portal, hayvanseverler ile sahiplenilmeyi bekleyen can dostlarımızı mode
 
 ## 📩 İletişim ve Veri Akışı
 Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yönetici e-posta adresine detaylı bir rapor olarak iletilir. İşlem sonrası kullanıcıya işlemin alındığına dair görsel bir başarı ekranı sunulur.
+
+<img width="1895" height="873" alt="Ekran görüntüsü 2026-05-14 141354" src="https://github.com/user-attachments/assets/1f1ebbeb-7401-49de-ac77-01edb72316eb" />
+
+
+<img width="1897" height="859" alt="image" src="https://github.com/user-attachments/assets/f4c5fafc-e543-4b3c-8fa9-2563e61423d3" />
