@@ -37,5 +37,8 @@ Pati Portal, hayvanseverler ile sahiplenilmeyi bekleyen can dostlarımızı mode
 ## 📩 İletişim ve Veri Akışı
 Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yönetici e-posta adresine detaylı bir rapor olarak iletilir. İşlem sonrası kullanıcıya işlemin alındığına dair görsel bir başarı ekranı sunulur.
 
-
+<p align="center">
+  <b>ANA SAYFA'NIN KARANLIK TEMA GÖRÜNTÜSÜ</b>
+  <img width="1906" height="877" alt="ana_sayfa_görüntüsü(karanlık_mod)" src="https://github.com/user-attachments/assets/e8213501-1a7b-4408-a260-590c598b662e" /> 
+</p>
 
