@@ -91,7 +91,7 @@ Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yöne
   <img width="1903" height="866" alt="sahiplenme_formu_başarı_alerti_ekranı" src="https://github.com/user-attachments/assets/3722f063-49b4-4ca2-84d1-f91c02bbeef5" />
 </p>
 
-
+---
 
 <p align="left">
   <b>📩 Formspree ile gelen başvuru maili</b>
