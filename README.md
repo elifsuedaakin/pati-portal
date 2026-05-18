@@ -62,7 +62,6 @@ Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yöne
   
 </p>
 
-
 <p align="center">
   <b>Sahiplendirme formu </b>
   <img width="1912" height="862" alt="sahiplenme_formu_sayfası" src="https://github.com/user-attachments/assets/7fbdc6df-6a59-4325-a172-a7522034d217" />
@@ -75,8 +74,10 @@ Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yöne
 
 <p align="center">
   <b>Formspare ile gelen başvuru maili</b>
-  <img width="1903" height="866" alt="sahiplenme_formu_başarı_alerti_ekranı" src="https://github.com/user-attachments/assets/3722f063-49b4-4ca2-84d1-f91c02bbeef5" />
+ <img width="1506" height="622" alt="formspare_ile_maile_gelen_basvuru_bilgileri" src="https://github.com/user-attachments/assets/12772049-c0f3-4a61-b6c2-1c1855d02a0d" />
 </p>
+
+
 
 <p align="center">
   <b>Arama Çubuğu </b>
