@@ -32,19 +32,10 @@ Pati Portal, hayvanseverler ile sahiplenilmeyi bekleyen can dostlarımızı mode
 * **Theme:** Next-themes (Açık ve Koyu tema desteği).
 * **Linter/Formatting:** Biome (Kod kalitesi ve A11y standartları).
 
+
+
 ## 📩 İletişim ve Veri Akışı
 Başvuru formu doldurulduğunda, veriler güvenli bir şekilde işlenir ve yönetici e-posta adresine detaylı bir rapor olarak iletilir. İşlem sonrası kullanıcıya işlemin alındığına dair görsel bir başarı ekranı sunulur.
 
-<img width="1895" height="873" alt="Ekran görüntüsü 2026-05-14 141354" src="https://github.com/user-attachments/assets/1f1ebbeb-7401-49de-ac77-01edb72316eb" />
-
-<img width="1919" height="856" alt="Ekran görüntüsü 2026-05-15 100955" src="https://github.com/user-attachments/assets/c67db242-5104-4a99-8aa7-ca48adff294f" />
-
-<img width="1916" height="827" alt="Ekran görüntüsü 2026-05-15 101008" src="https://github.com/user-attachments/assets/5561419e-0c56-4f38-b457-45f96ef73dd0" />
-
-<img width="1919" height="841" alt="Ekran görüntüsü 2026-05-15 101020" src="https://github.com/user-attachments/assets/4261492e-8bb4-4475-9eec-0481bc9d6bde" />
-
-<img width="1917" height="848" alt="Ekran görüntüsü 2026-05-15 101029" src="https://github.com/user-attachments/assets/46ed3a1e-f3a2-4636-afd5-b1322dd0f786" />
-
-<img width="1903" height="832" alt="image" src="https://github.com/user-attachments/assets/36b93548-ae47-412c-8bda-97360d9f2bad" />
 
 
