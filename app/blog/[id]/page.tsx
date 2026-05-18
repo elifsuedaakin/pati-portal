@@ -1,18 +1,25 @@
-"use client";
-
 import { BLOG_POSTS } from "@/constants/data";
-import { useParams } from "next/navigation";
 
-export default function BlogDetailPage() {
-  const params = useParams();
+interface PageProps {
+  // Next.js App Router'da dinamik url parametreleri sunucuda Promise olarak gelir
+  params: Promise<{ id: string }>;
+}
 
-  // TS(2367) hatasını çözmek için params.id'yi Number'a çevirdik
-  const post = BLOG_POSTS.find((b) => b.id === Number(params.id));
+export default async function BlogDetailPage({ params }: PageProps) {
+  // 1. Parametreyi sunucu tarafında asenkron olarak bekleyip (await) çözüyoruz
+  const resolvedParams = await params;
 
-  if (!post)
+  // 2. ID'yi güvenle Number'a çevirip blog listesinden yazıyı buluyoruz
+  const post = BLOG_POSTS.find((b) => b.id === Number(resolvedParams.id));
+
+  // Eğer blog yoksa sunucuda direkt bu HTML üretilip gönderilecek
+  if (!post) {
     return (
-      <div className="text-center py-20 italic">Blog bulunamadı... 🐾</div>
+      <div className="text-center py-20 italic text-muted-foreground">
+        Blog bulunamadı... 🐾
+      </div>
     );
+  }
 
   return (
     <main className="min-h-screen bg-background pb-20">
@@ -28,7 +35,7 @@ export default function BlogDetailPage() {
             {post.title}
           </h1>
           <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">
-            {post.date} • PATİ-PORTAL YAZARI
+            {post.date} • PATI-PORTAL YAZARI
           </p>
         </div>
 
@@ -52,9 +59,6 @@ export default function BlogDetailPage() {
 
           {/* Ana Metin (Content) */}
           <div className="text-muted-foreground leading-relaxed space-y-6 text-lg whitespace-pre-line">
-            {/* 
-               
-            */}
             {post.content ||
               "Yazı içeriği yükleniyor veya bu alan henüz doldurulmamış... 🐾"}
           </div>
