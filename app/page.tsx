@@ -11,7 +11,7 @@ export default function Home() {
     useSearchStore();
   const searchLower = searchQuery.toLowerCase();
 
-  //1. FONKSİYONEL SIRALAMA
+  // 1. FONKSİYONEL SIRALAMA
   const sortResults = (data: any[], titleKey: string) => {
     return [...data].sort((a, b) => {
       const aTitle = a[titleKey].toLowerCase();
@@ -23,7 +23,7 @@ export default function Home() {
     });
   };
 
-  //2. VERİ FİLTRELEME
+  // 2. VERİ FİLTRELEME
   const allFilteredAnimals = ANIMALS.filter((a) =>
     `${a.name} ${a.breed} ${a.category}`.toLowerCase().includes(searchLower),
   );
@@ -93,7 +93,7 @@ export default function Home() {
                   key={post.id}
                   className="block group"
                 >
-                  <Card className="overflow-hidden border-none shadow-sm hover:shadow-md transition-all bg-muted/20 rounded-[2rem] p-0 flex flex-col cursor-pointer">
+                  <Card className="overflow-hidden border-none shadow-sm hover:shadow-md transition-all bg-muted/20 rounded-[2rem] p-0 flex flex-col cursor-pointer h-full">
                     <div className="relative w-full h-[180px] shrink-0 overflow-hidden rounded-t-[2rem]">
                       <img
                         src={post.image}
@@ -101,23 +101,29 @@ export default function Home() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <CardContent className="p-3.5 pt-2 flex flex-col gap-1">
-                      <div className="flex items-center justify-between mb-0.5">
-                        <span className="text-[10px] text-white bg-white/10 px-2 py-0.5 rounded-md font-black uppercase tracking-widest">
-                          {post.category}
-                        </span>
-                        <span className="text-[9px] text-muted-foreground font-bold">
-                          {post.date}
-                        </span>
+                    <CardContent className="p-3.5 pt-2 flex flex-col gap-1 flex-1 justify-between">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center justify-between mb-0.5">
+                          {/* Kategori etiketini dinamik bir tona çektik */}
+                          <span className="text-[10px] text-primary bg-primary/10 px-2 py-0.5 rounded-md font-black uppercase tracking-widest">
+                            {post.category}
+                          </span>
+                          <span className="text-[9px] text-muted-foreground font-bold">
+                            {post.date}
+                          </span>
+                        </div>
+                        {/* Başlığı text-white yerine text-foreground (dinamik) yaptık, üstüne gelince yine primary parlayacak */}
+                        <h3 className="font-bold text-sm leading-tight text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-[12px] text-muted-foreground italic leading-snug line-clamp-2">
+                          {post.description}
+                        </p>
                       </div>
-                      <h3 className="font-bold text-sm leading-tight text-white group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-[12px] text-muted-foreground italic leading-snug line-clamp-2">
-                        {post.description}
-                      </p>
-                      <div className="mt-1 pt-1.5 border-t border-white/5 flex items-center justify-end">
-                        <span className="text-[10px] font-black text-white/80 uppercase tracking-tighter flex items-center gap-1 group-hover:text-primary transition-colors">
+
+                      {/* OKU butonu ve border alanını dinamik yaptık. Artık aydınlık modda da kabak gibi görünecek */}
+                      <div className="mt-2 pt-1.5 border-t border-border/50 flex items-center justify-end">
+                        <span className="text-[10px] font-black text-foreground/80 uppercase tracking-tighter flex items-center gap-1 group-hover:text-primary transition-colors">
                           OKU 🐾
                         </span>
                       </div>
